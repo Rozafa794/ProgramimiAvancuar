@@ -14,6 +14,7 @@
     "babel-preset-current-node-syntax": "^1.1.0",
     "babel-preset-jest": "^29.6.3",
     "balanced-match": "^1.0.2",
+    "bcrypt": "^5.1.1",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.3",
     "browserslist": "^4.24.4",
@@ -191,7 +192,6 @@
     "yargs-parser": "^21.1.1",
     "yocto-queue": "^0.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },

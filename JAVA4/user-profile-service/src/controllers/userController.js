@@ -3,20 +3,33 @@ const { isValidEmail, isValidPassword } = require('../utils/validation');
 const { createUser, findUserByEmail } = require('../services/userService');
 
 const register = async (req, res) => {
-  const { email, password } = req.body;
+  try {
+    const { email, password, name, address } = req.body;
 
-  if (!isValidEmail(email) || !isValidPassword(password)) {
-    return res.status(400).json({ message: 'Invalid input' });
+    // Validimi i të dhënave
+    if (!isValidEmail(email) || !isValidPassword(password)) {
+      return res.status(400).json({ message: 'Invalid input' });
+    }
+
+    // Kontrollo nëse ekziston përdoruesi
+    const existingUser = await findUserByEmail(email);
+    if (existingUser) {
+      return res.status(409).json({ message: 'User already exists' });
+    }
+
+    // Hash password dhe krijo përdoruesin
+    const hashedPassword = await hashPassword(password);
+    const newUser = await createUser({
+      email,
+      password: hashedPassword,
+      name,
+      address,
+    });
+
+    res.status(201).json({ message: 'User registered', user: { email: newUser.email } });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
-
-  if (findUserByEmail(email)) {
-    return res.status(409).json({ message: 'User already exists' });
-  }
-
-  const hashedPassword = await hashPassword(password);
-  const newUser = createUser({ email, password: hashedPassword });
-
-  res.status(201).json({ message: 'User registered', user: { email: newUser.email } });
 };
 
 const getProfile = (req, res) => {
