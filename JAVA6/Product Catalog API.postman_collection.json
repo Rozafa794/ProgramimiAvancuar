@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "b6c8c141-3b73-4c7f-a533-4cbc30c7c792",
+		"name": "Product Catalog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43716731",
+		"_collection_link": "https://rozafahajrizi.postman.co/workspace/Rozafa-Hajrizi's-Workspace~dfaaa9b9-a8f6-4ba7-8c8d-53078b1247ed/collection/43716731-b6c8c141-3b73-4c7f-a533-4cbc30c7c792?action=share&source=collection_link&creator=43716731"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://<mock-id>.mockapi.io/products",
+					"protocol": "https",
+					"host": [
+						"<mock-id>",
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mockapi.io/products",
+							"protocol": "https",
+							"host": [
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mockapi.io/products/1",
+					"protocol": "https",
+					"host": [
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mockapi.io/products/1",
+							"protocol": "https",
+							"host": [
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://mockapi.io/products/1",
+					"protocol": "https",
+					"host": [
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mockapi.io/products/1",
+					"protocol": "https",
+					"host": [
+						"mockapi",
+						"io"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://mockapi.io/products/1",
+							"protocol": "https",
+							"host": [
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
