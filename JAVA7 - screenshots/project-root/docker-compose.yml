@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  user-service:
+    build: ./user-profile-service
+    container_name: user-service
+    ports:
+      - "3000:3000"
+    restart: always
+
+  product-service:
+    build: ./product-service
+    container_name: product-service
+    ports:
+      - "3001:3001"
+    restart: always
